@@ -40,6 +40,7 @@ Listed primarily by the language which can be used for interoperability / [FFI](
 - [C/C++](#cc)
 - [C#](#c)
 - [Erlang](#erlang)
+- [Fortran](#fortran)
 - [Go](#go)
 - [Java](#java)
 - [JavaScript](#javascript)
@@ -58,13 +59,17 @@ Listed primarily by the language which can be used for interoperability / [FFI](
 
 - [C-Mera](https://github.com/kiselgra/c-mera) [Type-A] also includes extensions to generate code to run on CUDA, GLSL
 - [Carp](https://github.com/carp-lang/Carp) [Type-B] statically typed, no GC (Rust-like borrow checking)
+- [Extempore](https://github.com/digego/extempore) [Type-S] designed for live coding and music performances, temporal scheduling based on audio card sample rate
 - [Ferret](https://ferret-lang.org/) [Type-C] aimed towards embedded systems
 - [Janet](https://janet-lang.org/) [Type-B] embedable, large standard library, GC
+- [Maru](https://www.piumarta.com/software/maru/) [Type-B] minimal self-hosting lisp, multimethods, user-defined types and structures, GC
+- [PicoLisp](https://picolisp.com) [Type-B] compiled to bytecode and interpreted, C and Java interop, built-in  database and GUI
 - [Toccata](https://github.com/Toccata-Lang/toccata) [Type-C] Clojure-inspired, gradually typed, no nil values, reference counting, compiles into native binaries
 - **Common Lisp**
   - [SBCL](http://www.sbcl.org) [Type-L] high performance native code compiler, native threading support, type inference engine
   - [CLISP](https://clisp.sourceforge.io/) [Type-L] uses bytecode compiler, easily portable
   - [Clasp](https://github.com/clasp-developers/clasp) [Type-L] compiled using LLVM, seamless integration with existing libraries
+  - [ECL](https://common-lisp.net/project/ecl/) [Type-L] embeddable and portable, can build standalone executables
   - See list of [additional implementations](https://www.cliki.net/Common+Lisp+implementation).
 - **Scheme**
   - [Chez Scheme](https://www.scheme.com/) [Type-S] compiles to native binaries, among the fastest available Scheme implementations, R6RS
@@ -83,6 +88,10 @@ Listed primarily by the language which can be used for interoperability / [FFI](
 - [Clojerl](https://github.com/clojerl/clojerl) [Type-C]
 - [Lisp Flavored Erlang](http://lfe.io/) [Type-A]
 
+### Fortran
+
+- [fscheme](https://genepi.qimr.edu.au/Staff/davidD/Scheme/SIOM.html) [Type-S] small scheme interpreter written in Fortran 95
+
 ### Go
 
 - [Joker](https://joker-lang.org/) [Type-C] interpreter, linter, great for scripting, Go interop is very limited
@@ -93,14 +102,20 @@ Listed primarily by the language which can be used for interoperability / [FFI](
 - [ABCL](https://common-lisp.net/project/armedbear/) [Type-L] CL interpreter and compiler, embedable using Java scripting API (JSR-223
 - [Clojure](https://clojure.org/) [Type-C]
 - [Kawa](https://www.gnu.org/software/kawa/) [Type-S] scheme implementation (R7RS)
+- [PicoLisp](https://picolisp.com) [Type-B] compiled to bytecode and interpreted, C and Java interop, built-in  database and GUI
 
 ### JavaScript
 
+- [BiwaScheme](https://www.biwascheme.org/) [Type-S] compact Scheme written in JavaScript, integrates well with web browsers and Node
 - [ClojureScript](https://clojurescript.org/) [Typec-C]
+- [Lumen](https://github.com/sctb/lumen) [Type-A] self-hosted Lisp for Lua and JavaScript, uses arrays as first-class datastructures
+- [Whalesong](https://www.hashcollision.org/whalesong/) [Type-S] Racket to JavaScript compiler
+- [Wisp](https://github.com/Gozala/wisp) [Type-C] Clojure-like, has protocols, no persistent data structures
 
 ### Lua
 
 - [Fennel](https://fennel-lang.org/) [Type-A] full Lua compatibility, embedable, compiled code with no runtime dependency
+- [Lumen](https://github.com/sctb/lumen) [Type-A] self-hosted Lisp for Lua and JavaScript, uses arrays as first-class datastructures
 - [Urn](https://urn-lang.com/) [?] focus on minimalism, should work with LuaJIT, influenced by Common Lisp and Clojure
 
 ### Objective-C
@@ -124,6 +139,7 @@ Listed primarily by the language which can be used for interoperability / [FFI](
 ### Shell
 
 - [Gherkin](https://github.com/alandipert/gherkin) [Type-B] (dormant) implemented in Bash, shell interop
+- [Fleck](https://github.com/chr15m/flk/) [Type-A] Clojure-like, based on [Mal](https://github.com/kanaka/mal/), packaged as single-file Bash script
 
 ### VHDL
 
@@ -133,12 +149,15 @@ Listed primarily by the language which can be used for interoperability / [FFI](
 
 - [clj-wasm](https://github.com/roman01la/clj-wasm) [Type-A] Clojure-flavored WASM's text format
 - [Arboreta WASM](https://github.com/Arboreta/arboreta-wasm) [?] Common Lisp tooling for WebAssembly
+- [Schism](https://github.com/google/schism) [Type-S] self-hosting compiler from a subset of R6RS Scheme to WebAssembly
 
 ## Misc
 
 - [Bel](http://paulgraham.com/bel.html) - self-hosted lisp dialect, currently no implementation exists, see also markdown formatted [mirror](https://github.com/alephyud/bel)
-- [Bigloo](https://www-sop.inria.fr/mimosa/fp/Bigloo/) [Type-S] - compiles into native binaries, interop with C, JVM, .NET
+- [Bigloo](https://www-sop.inria.fr/mimosa/fp/Bigloo/) [Type-S] compiles into native binaries, interop with C, JVM, .NET
+- [Shen](https://shen-language.github.io/) [Type-B] implementations in many programming languages, builtin pattern-matching and logic programming, optional static typing and lazy evaluation
 - [Mal](https://github.com/kanaka/mal) is an educational lisp with implementations in dozens of languages. It is a great resource for learning about lisp implementation.
+- A list of more [Clojure-like languages](https://github.com/chr15m/awesome-clojure-likes).
 - Additional "write C in Lisp" [projects](https://www.reddit.com/r/lisp/comments/e10spm/a_list_of_various_lispflavored_programming/f8n6qxa/) (most of them not ready for a prime time).
 - See also list of languages  [implemented in Lisp](https://github.com/vindarel/list-of-languages-implemented-in-lisp).
 
